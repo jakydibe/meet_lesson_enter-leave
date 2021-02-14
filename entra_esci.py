@@ -8,8 +8,6 @@ import datetime
 from datetime import time
 from selenium.webdriver.chrome.options import Options
 
-
-
 opt = Options()
 opt.add_argument("--disable-infobars")
 opt.add_argument("start-maximized")
@@ -23,8 +21,6 @@ opt.add_experimental_option("prefs", { \
   })
 
 tempo = input('scrivi qui l\' orario in cui entrare (es. 21:32:46)-----> \n')
-
-
 
 user = input('immetti qui la tua mail-----> \n')
 password = input('immetti qui la password della tua mail-----> \n')
@@ -73,6 +69,3 @@ while True:
             break
         else:
             continue
-#aprire browser /// entrare e-mail //// entrare password .//// andare in link meet (https://meet.google.com/lookup/fubtul6aob?authuser=1&hs=179) //// individuare numero partecipanti
-
-# se partecipanti > 10 entra,z\ poi se partecipanti minori di 16, esci.n
