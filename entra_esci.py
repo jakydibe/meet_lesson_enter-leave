@@ -57,7 +57,7 @@ while True:
     if scelta == 'S' or scelta == 's':
         richiesta_partecipanti = int(input('con quanti partecipanti rimasti vuoi automaticamente uscire?-----> '))
         while True:
-            el_numero_partecipanti = int(driver.find_element_by_xpath("/html/body/div[1]/c-wiz/div[1]/div/div[8]/div[3]/div[1]/div[3]/div/div[2]/div[1]/span/span/div/div/span[2]").text)
+            el_numero_partecipanti = int(float(driver.find_element_by_xpath("/html/body/div[1]/c-wiz/div[1]/div/div[8]/div[3]/div[1]/div[3]/div/div[2]/div[1]/span/span/div/div/span[2]").text))
             if el_numero_partecipanti <= richiesta_partecipanti:
                 driver.find_element_by_xpath("/html/body/div[1]/c-wiz/div[1]/div/div[8]/div[3]/div[9]/div[2]/div[2]/div").click()
                 break
