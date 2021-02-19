@@ -20,13 +20,13 @@ opt.add_experimental_option("prefs", { \
     "profile.default_content_setting_values.notifications": 1 
   })
 
-tempo = input('scrivi qui l\' orario in cui entrare (es. 21:32:46)-----> \n')
+tempo = input('write here the time you want to enter (es. 21:32:46)-----> \n')
 
-user = input('immetti qui la tua mail-----> \n')
-password = input('immetti qui la password della tua mail-----> \n')
+user = input('put here your e-mail -----> \n')
+password = input('put here the password of your e-mail-----> \n')
 
-print('una volta entrato in videochiamata ti verra\' chiesto se e con quanti partecipanti vuoi uscire dalla lezione\n')
-link_meet = input('incolla qui il link della tua riunione meet-----> \n')
+print('once you entered it will be asked wether and with how many people you want to leave the lesson\n')
+link_meet = input('paste here your meet-link -----> \n')
 
 while True:
     orario_attuale = datetime.datetime.now()  
@@ -52,10 +52,10 @@ while True:
     else:
         continue
 
-scelta = input('\n\nvuoi uscire automaticamente dalla lezione quando il numero dei partecipanti si abbassa(aka tutti stanno salutando il prof.)? S/N, ATTENZIONE: SE METTI UN NUMERO TROPPO BASSO O COMUNQUE MINORE O UGUALE A QUELLO DEGLI ATTUALI PARTECIPANTI USCIRA\' AUTOMATICAMENTE\n')
+scelta = input('\n\ndo u want to exit the lesson when partecipants goes below a certain number?(aka all fucking nerds are greeting profs)? Y/N\n')
 while True:
-    if scelta == 'S' or scelta == 's':
-        richiesta_partecipanti = int(input('con quanti partecipanti rimasti vuoi automaticamente uscire?-----> '))
+    if scelta == 'Y' or scelta == 'y':
+        richiesta_partecipanti = int(input('with how many people do u want to exit?-----> BE CAREFUL, IF YOU PUT A NUMBER <= THE NUMBER OF ACTUAL PARTECIPANTS YOU WILL BE AUTOMATICALLY KICKED OUT '))
         while True:
             el_numero_partecipanti = int(float(driver.find_element_by_xpath("/html/body/div[1]/c-wiz/div[1]/div/div[8]/div[3]/div[1]/div[3]/div/div[2]/div[1]/span/span/div/div/span[2]").text))
             if el_numero_partecipanti <= richiesta_partecipanti:
@@ -64,8 +64,8 @@ while True:
             else:
                 continue
     else:
-        scelta_interna = input('ne se proprio sicuro?? S/N')
-        if scelta_interna == 'S' or scelta_interna == 's':
+        scelta_interna = input('are you sure?? Y/N')
+        if scelta_interna == 'Y' or scelta_interna == 'Y':
             break
         else:
             continue
