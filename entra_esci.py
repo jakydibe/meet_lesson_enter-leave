@@ -52,7 +52,7 @@ while True:
     else:
         continue
 
-scelta = input('\n\ndo u want to exit the lesson when partecipants goes below a certain number?(aka all fucking nerds are greeting profs)? Y/N\n')
+scelta = input('\n\ndo u wanna exit the lesson when partecipants goes below a certain number?(aka all nerds are greeting profs)? Y/N\n')
 while True:
     if scelta == 'Y' or scelta == 'y':
         richiesta_partecipanti = int(input('with how many people do u want to exit?-----> BE CAREFUL, IF YOU PUT A NUMBER <= THE NUMBER OF ACTUAL PARTECIPANTS YOU WILL BE AUTOMATICALLY KICKED OUT '))
